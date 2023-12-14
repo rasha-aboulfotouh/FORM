@@ -1,0 +1,21 @@
+<div class="container w-60 m-5">
+    <div class="card text-center">
+        <div class="card-header">
+           <h2> User Details </h2>
+        </div>
+
+        <div class="card-body">
+            <h2 class="card-title"> {{user?.name}} </h2>
+
+            <p class="card-text"> age: {{user?.age}} </p>
+            <p class="card-text"> add: {{user?.add}} </p>
+            <p class="card-text"> UserName: {{user?.email}} </p>
+            <p class="card-text"> Password: {{user?.password}} </p>
+
+            <a [routerLink]="['/']" class="btn btn-primary"> Go Back </a>
+        </div>
+
+       
+
+    </div>
+</div>

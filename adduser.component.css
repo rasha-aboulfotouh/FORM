@@ -1,0 +1,22 @@
+
+
+label {
+    font-weight: bold;
+    color: brown;
+    font-size: larger;
+}
+
+
+
+.form-controle {
+    width: 40%;
+    height:50px;
+  
+}
+
+
+
+
+.btn {
+    width: 25%;
+}

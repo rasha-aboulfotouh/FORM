@@ -1,0 +1,13 @@
+.text-center {
+    background-color: antiquewhite;
+
+}
+
+.card-header {
+    background-color: bisque;
+
+}
+
+.card-title, .card-text {
+    color: blueviolet;
+}
