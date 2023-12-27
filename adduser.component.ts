@@ -11,43 +11,67 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angul
 })
 export class AdduserComponent {
 
-  form! :FormGroup;
-
-  users: number = 10;
-  saveuser : User[] = [];
-
-
-  userservce :UserserviceService= inject(UserserviceService);
-
-  formBuilder! :FormBuilder;
+  // submitApplication() {
+  //   throw new Error('Method not implemented.');
+  // }
 
 
-  constructor() {
+  // submit() {
+  //   throw new Error('Method not implemented.');
+  // }
 
-    this.saveuser = this.userservce.getAllUsers();
+  // form!: FormGroup;
 
-    this.users = this.userservce.usercount();
+  // users: number = 10;
+  // saveuser: User[] = [];
+
+
+
+  
+
+  ///****////
+
+
+  ////****/////
+
+  user!: User[];
+
+  userservce: UserserviceService = inject(UserserviceService);
+
+//***/// *//
+  userform!: FormGroup;
+
+
+  constructor(private formBuilder: FormBuilder) {
+
+    this.userform = this.formBuilder.group({
+      name: [''],
+      age: [''],
+      email: [''],
+      address: [''],
+      password: [''],
+
+    })
+
+    this.user = this.userservce.getAllUsers();
+
   }
 
 
-    // ngOnInit():void {
+  ///      *******     ///
+  adduser(){
 
-    //   this.form = this.formBuilder.group(
-    //     {
-    //       id:[]
-  
-    //     }
-    //   )
-
-    // }
+    const user: User = this.userform.value;
+    this.userservce.createUser(user);
+    console.log(user);
+  }
 
 
 
-    // save()
-
-    // this.saveuser = this.form.value;
-
-    // alert()
 
 
 }
+
+
+
+

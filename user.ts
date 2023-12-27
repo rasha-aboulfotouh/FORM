@@ -1,9 +1,10 @@
 export interface User {
-id:number;
-name: string;
-age:number;
-email:string;
-add:string;
-password:string;
+    
+id: number,
+name: string,
+age: string,
+email: string,
+address: string,
+password: string,
 
 }

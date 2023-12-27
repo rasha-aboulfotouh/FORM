@@ -1,40 +1,50 @@
-
-<div class="container text-center " >
-    <h2> Add User {{users + 1}} </h2>
+<div class="container text-center ">
+    <!-- <h2> Add User {{user}} </h2> -->
+    <h2> Add User </h2>
     <pre></pre>
 
-  <form action="" >
-    <div class="form-group">
-        <label for="firstname float-left "> Name </label> <br>
-        <input type="text" name="firstname" class="form-controle" >
-    </div>
-    <pre></pre>
+    <form [formGroup]="userform">
+        <div class="form-group">
+            <label for="firstname float-left "> Name </label>
 
-    <div class="form-group">
-        <label for="age"> Age </label> <br>
-        <input type="text" name="age" class="form-controle" >
-    </div>
-    <pre></pre>
+            <input type="text" class="form-controle" formControlName="name">
+        </div>
 
-    <div class="form-group">
-        <label for="email"> Email </label> <br>
-        <input type="text" name="email" class="form-controle" >
-    </div>
-    <pre></pre>
+        <pre></pre>
 
-    <div class="form-group">
-        <label for="address"> Address </label> <br>
-        <input type="text" name="address" class="form-controle" >
-    </div>
-    <pre></pre>
-    <div class="form-group">
-        <label for="password"> Password </label> <br>
-        <input type="text" name="password" class="form-controle" >
-    </div>
-    <pre></pre>
+        <div class="form-group">
+            <label for="age"> Age </label>
 
+            <input type="text" class="form-controle" formControlName="age">
+        </div>
 
-    <button class="btn btn-primary" type="submit"> Submit</button>
+        <pre></pre>
 
-  </form>
+        <div class="form-group">
+            <label for="email"> Email </label>
+
+            <input type="text" class="form-controle" formControlName="email">
+        </div>
+
+        <pre></pre>
+
+        <div class="form-group">
+            <label for="address"> Address </label>
+
+            <input type="text" class="form-controle" formControlName="address">
+        </div>
+
+        <pre></pre>
+
+        <div class="form-group">
+            <label for="password"> Password </label>
+
+            <input type="text" class="form-controle" formControlName="password">
+        </div>
+
+        <pre></pre>
+
+        <button class="btn btn-primary" type="submit" (click)="adduser()" [routerLink]="['']"> Submit</button>
+
+    </form>
 </div>

@@ -1,7 +1,14 @@
 
-.img {
-    margin-top: 5px;
 
+.text-center{
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+
+li {
+    background-color: beige;
 }
 
 

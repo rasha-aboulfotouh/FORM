@@ -22,7 +22,7 @@ export class ListuserComponent {
   
   //Delete
   deleteuser(id:number){
-    this.userservce.deleteuser(id);
+    this.userservce.deleteUser(id);
   }
 
 

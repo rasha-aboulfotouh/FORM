@@ -1,16 +1,18 @@
 
 
 label {
-    font-weight: bold;
     color: brown;
     font-size: larger;
+    width: 50px;
+    margin-right: 70px;
 }
 
 
 
 .form-controle {
-    width: 40%;
+    width: 50%;
     height:50px;
+    background-color: beige;
   
 }
 

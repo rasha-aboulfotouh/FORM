@@ -15,7 +15,7 @@ const routes: Routes = [
     { path: 'add', component: AdduserComponent },
     { path: 'view/:id', component: ViewuserComponent },
 
-    { path: 'edit', component: EditComponent },
+    { path: 'edit/:id', component: EditComponent },
 
 
 

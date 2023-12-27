@@ -1,42 +1,39 @@
-
-
 <div class="container">
-<h2>Edit User</h2>
-<pre></pre>
-
-<form action="" >
-    <div class="form-group">
-        <label for="firstname float-left "> Name </label> <br>
-        <input type="text" name="firstname" class="form-controle" >
-    </div>
+    <h2>Edit User</h2>
     <pre></pre>
 
-    <div class="form-group">
-        <label for="age"> Age </label> <br>
-        <input type="text" name="age" class="form-controle" >
-    </div>
-    <pre></pre>
+    <form  [formGroup]="updateuserform">
+        <div class="form-group">
+            <label for="firstname float-left "> Name </label> <br>
+            <input type="text"  class="form-controle" formControlName="name">
+        </div>
+        <pre></pre>
 
-    <div class="form-group">
-        <label for="email"> Email </label> <br>
-        <input type="text" name="email" class="form-controle" >
-    </div>
-    <pre></pre>
+        <div class="form-group">
+            <label for="age"> Age </label> <br>
+            <input type="text"  class="form-controle"formControlName="age" >
+        </div>
+        <pre></pre>
 
-    <div class="form-group">
-        <label for="address"> Address </label> <br>
-        <input type="text" name="address" class="form-controle" >
-    </div>
-    <pre></pre>
-    <div class="form-group">
-        <label for="password"> Password </label> <br>
-        <input type="text" name="password" class="form-controle" >
-    </div>
-    <pre></pre>
+        <div class="form-group">
+            <label for="email"> Email </label> <br>
+            <input type="text"  class="form-controle" formControlName="email">
+        </div>
+        <pre></pre>
 
-    <button class="btn btn-info m-3" type="submit"> Save </button>
+        <div class="form-group">
+            <label for="address"> Address </label> <br>
+            <input type="text"  class="form-controle" formControlName="address">
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="password"> Password </label> <br>
+            <input type="text"  class="form-controle" formControlName="password">
+        </div>
+        <pre></pre>
 
-</form>
+        <button class="btn btn-info m-3" type="submit" (click)="upDateUser()"  [routerLink]="['']" > Save </button>
+
+    </form>
 
 </div>
-

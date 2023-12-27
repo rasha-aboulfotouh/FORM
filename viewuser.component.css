@@ -8,6 +8,12 @@
 
 }
 
-.card-title, .card-text {
-    color: blueviolet;
+
+.card-title  {
+    color: brown;
 }
+
+.card-text {
+    color: rgb(221, 59, 59);
+}
+
