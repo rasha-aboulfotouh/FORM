@@ -10,6 +10,8 @@ import { ListuserComponent } from './listuser/listuser.component';
 import { ViewuserComponent } from './viewuser/viewuser.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     ErrorComponent,
     ListuserComponent,
     ViewuserComponent,
-    AdduserComponent
+    AdduserComponent,
+    DetailComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,55 @@
-
 <div class="container ">
 
-    <div class="text-center">
-        <img src="../assets/user-data-icon.jpg" alt="desc" class="img " width="20%">
-    </div>
-    
-    <div class="row justify-content-center">
-
-      <ul class="list-group w-100">
-        <li class="list-group-item"  *ngFor="let x of users" > {{x.id}} - {{x.name}}
-          <button class="btn btn-success float-end button" [routerLink]="['edit',x.id]"> Edit </button>
-          <button class="btn btn-info float-end button" [routerLink]="['view',x.id]" > View </button>
-          <button class="btn btn-danger float-end button"(click)="deleteuser(x.id)"> Delete</button>
-        </li>
-        <button class="btn btn-larg btn-primary m-3" [routerLink]="['add']"> Add User</button>
-      </ul>
-
-    </div>
+  <div class="user-data text-center">
+    <img src="../assets/user-data-icon.jpg" alt="desc" class="img " width="20%">
   </div>
+
+  <div class="row justify-content-center">
+
+    <ul class="list-group w-100">
+      <li class="list-group-item" *ngFor="let x of users">
+        {{x.id}} - {{x.name}}
+        <button class="btn btn-success float-end button" [routerLink]="['edit',x.id]"> Edit </button>
+        <button class="btn btn-info float-end button" [routerLink]="['view',x.id]"> View </button>
+        <button class="btn btn-danger float-end button" (click)="deleteuser(x.id)"> Delete</button>
+      </li>
+      <button class="btn btn-larg btn-primary m-3" [routerLink]="['add']"> Add User</button>
+    </ul>
+
+  </div>
+</div>
+
+
+<pre></pre>
+
+
+<div class="container api ">
+  <h1> Api Product List</h1>
+  <div class="row">
+    <div class="col-lg-4 d-flex align-items"  *ngFor="let x of varapi">
+
+      <div class="card">
+
+        <img [src]="x.image" alt="{{ x.title }}" class="rounded mx-auto d-block" width="80" height="80" >
+
+        <div class="card-body">
+          <h4 class="card-title"> {{ x.title}} </h4>
+ 
+          <p class="card-text">{{ x.description }} </p>
+          <p class="card-text">Price: $ {{ x.price }} </p>
+          <!-- Add to card button -->
+          <button class="btn btn-primary" (click)="addTocard(x)"> Add to card </button>
+          <!-- More Details button  -->
+          <button class="btn btn-secondary" (click)="showDetails(x)"> View Details </button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<!--  -->
